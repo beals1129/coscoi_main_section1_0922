@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
+
 
 #hero {
     /* border-top: 50px solid white;
@@ -13,7 +19,58 @@
     height: 100%;
     overflow: hidden;
 }
+/* main */
+#main_menu {
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    margin:100px  0 0 100px ;
+}
 
+
+.main_logo {
+
+    margin-left: 40px;
+}
+
+/* main button */
+.main_btn {
+    width:46px;
+    height: 46px;
+    border-radius: 23px;
+    background-color: rgb(255, 63, 52);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+
+.btn_icon_wrap {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+
+
+.btn_icon_bar {
+    width: 16px;
+    height: 4px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+    background-color: white;
+
+}
+
+#icon_1 {
+    margin-left: 8px;
+}
+
+#icon_2 {
+    margin-left: -8px;
+    
+}
 
 .video_wrap {
     width: 100%;
@@ -34,11 +91,6 @@ video {
     width: 100%;
 }
 
-.main_logo {
-    position: absolute;
-    top: 100px;
-    left: 185px;
-}
 
 .scroll_next{
     width: 165px;
@@ -75,6 +127,109 @@ video {
     left: calc(50% - 75px);
 
 }
+
+
+/* hero */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 28px;
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+.hero_conts{
+    color: white;
+    text-align: right;
+    position: absolute;
+    top: 140px;
+    right: 96px;
+    z-index: 10000;
+
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 200;
+    height: 38px;
+}
+
+.conts_span {
+    text-align: center;
+    width: 520px;
+    border-top: 4px solid rgb(255, 63, 52);
+}
+
+@keyframes line_moving {
+    0% { width: 520px;}
+    100% { width: 400px ;}
+}
+.conts_span:hover {
+    margin: 0 32px;
+    width: 460px;
+    transition: 0.5s;
+    /* animation: line_moving 2s ease 0 infinite alternate; */
+    /*애니메이션 왜안먹냐..*/
+
+}
+
+.hero_border {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-top: 50px solid rgb(247, 247, 247);
+    border-left: 50px solid rgb(247, 247, 247);
+    border-bottom: 150px solid rgb(247, 247, 247);
+
+    position: absolute;
+    top:0;
+    left: 0;
+
+}
+
+.hero_banner1 {
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+}
+
+#sns_btn {
+    position: fixed;
+    right: 0px;
+    bottom: 210px;
+    z-index: 999;
+    color: white;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: rotate(270deg); 
+}
+
+#sns_btn span{
+    margin: 0 10px 0 -30px;
+    width: 60px;
+    height: 3px;
+    background-color: rgb(255, 63, 52);
+    border-radius: 1px;
+    display: inline-block;
+   vertical-align: middle;
+}
+
+#sns_btn span:hover{
+    margin: 0 10px 0 0;
+    transition: 0.5s;
+}
+#sns_btn h3:hover {
+    font-weight: 400;
+    color: rgb(255, 63, 52);
+}
+
 
 @keyframes arrow_moving {
     0%{
