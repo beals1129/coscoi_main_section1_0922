@@ -28,9 +28,14 @@
 }
 
 
-.main_logo {
-
+#main_logo {
+    transition: 0.2s;
     margin-left: 40px;
+    
+}
+#main_logo img {
+    width :100%;
+    z-index: 99999999;
 }
 
 /* main button */
@@ -72,14 +77,153 @@
     
 }
 
+
+.gnb_btn span{
+    width : 16px;
+
+    height: 1;
+    border-top: 2px solid rgb(34, 34, 34);
+    display: block;
+}
+
+
+/* gnb lnb */
+
+#gnb {
+    width: 615px;
+    height: 100%;
+    position: fixed;
+    left: -715px;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    padding: 100px 0 0 100px;
+    transition: all 0.7s;
+    
+}
+
+.gnb_wrap {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.gnb_btn {
+    background-color: white;
+    border: 3px solid rgb(188, 188, 188);
+}
+.gnb_logo {
+    margin-left: 40px;
+}
+
+
 .video_wrap {
     width: 100%;
-
+   
     display: flex;
     justify-content: center;
     align-content: center;
 
 }
+
+
+.gnb_menu > a li {
+    margin-left: 30px;
+    list-style: none;
+    font-size: 34px;
+    line-height: 53px;
+    font-weight: 900;
+    color: rgb(34, 34, 34);
+
+
+
+}
+.gnb_menu > a {
+    text-decoration: none;
+    /* 왜 얘가 더 상위지? */
+}
+.lnb_conts {
+    list-style: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 900;
+    color: rgb(34, 34, 34);
+    margin: 0 0 0 60px;
+}
+.lnb_conts a{
+    text-decoration: none ;
+    color: rgb(34, 34, 34);
+
+}
+.gnb_menu .gnb_main_text {
+    color: rgb(255, 63, 52);
+}
+
+.gnb_menu a li .gnb_span {
+    display: inline-block;
+    width: 120px;
+    height: 12px;
+    border-top: 3px solid rgb(255, 63, 52);
+    margin: 0 30px 0 0 ;
+    
+}
+
+.gnb_menu a li span {
+    height: 12px;
+    width: 0px;
+    border-top: 3px solid rgb(255, 63, 52);
+    margin-right: 50px;
+}
+
+.gnb_menu a .gnb_span_none{
+    margin: 0 50px 0 0 ;
+}
+
+.gnb_menu a li:hover .gnb_span_motion {
+    display: inline-block;
+    width: 30px;
+    height: 12px;
+    border-top: 3px solid rgb(255, 63, 52);
+    transition: width, 0.3s;
+}
+
+.lnb_conts a li span{
+    height: 5px;
+    width: 0px;
+    border-top: 3px solid rgb(255, 63, 52);
+    margin-right: 20px;
+}
+
+.lnb_conts a li:hover .gnb_conts_span_motion {
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    border-top: 3px solid rgb(255, 63, 52);
+    /* margin: 0 30px 0 0 ; */
+    transition: width, 0.3s;
+    
+}
+/**/
+
+
+
+
+
+.lnb_contect {
+    list-style: none;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: rgb(34, 34, 34);
+    margin: 60px 0 0 80px;
+
+}
+.lnb_contect a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+
+
 /* video {
     width: 1855px;
     height: 726px;
@@ -243,4 +387,172 @@ h3 {
     100% {
         padding-bottom: 40px;
     }
+}
+
+
+/* section go_east */
+
+#go_east {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/main-cont-s1_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.go_monkey {
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 450px);
+    z-index: 100;
+    /* animation: c_down_1 1s 0.5s ease-in forwards; */
+}
+
+.go_rabbit {
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% + 100px);
+    z-index: 97;
+    animation: c_down_1 1s 0.7s ease-in forwards;
+    transform: translateY(-100px);
+}
+
+.go_mouse {
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 200px);
+    z-index: 98;
+    transform: translateY(+20px);
+    animation: c_down_1 1s 0.4s ease-in forwards;
+}
+
+.go_man {
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 500px);
+    transform: translateY(-100px);
+    animation: c_down_1 1s 0.8s ease-in forwards;
+    z-index: 97;
+}
+
+.go_car {
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% + 100px);
+    transform: translateY(-450px);
+    animation: c_down_1 1s 0.6s ease-in forwards;
+    z-index: 96;
+}
+
+.go_ballon {
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 800px);
+    transform: translateY(+400px);
+    animation: c_down_2 0.9s 1s ease-in forwards;
+    z-index: 100;
+}
+
+
+.go_banana {
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% + 100px);
+    transform: translateY(-600px);
+    animation: c_down_1 0.9s 1.2s ease-in forwards;
+    z-index: 100;
+}
+
+
+@keyframes c_down_1{
+    0%{bottom: 100%; animation-timing-function: ease-in;}
+    50% {bottom:5%; animation-timing-function: ease-out;}
+    75% {bottom: 15%;animation-timing-function: ease-in;}
+    100% {bottom: 5%;animation-timing-function: ease-out;}
+}
+
+@keyframes c_down_2{
+    0%{top: 100%; animation-timing-function: ease-in;}
+    50% {top :20%; animation-timing-function: ease-out;}
+    75% {top : 10%;animation-timing-function: ease-in;}
+    100% {top: 20%;animation-timing-function: ease-out;}
+}
+
+@keyframes title_down_1 {
+    0% {top: -200px;}
+    100% {top: 50px;}
+}
+
+/* title box */
+
+.go_conts_title {
+
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: -200px;
+
+    animation: title_down_1 0.4s ease-in forwards;
+    z-index: 100;
+}
+
+.go_conts_title h2 {
+    font-size: 30px;
+    line-height: 38px;
+    color: white;
+    font-weight: 100;
+}
+
+.go_conts_title p {
+    margin: 0 auto;
+    width: 20px; border-bottom: 3px solid rgb(255, 63, 52) ;
+}
+
+.go_title_box {
+    width: 180px;
+    height: 180px;
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 98;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(-50%, -50% );
+    animation: titlebox 2s forwards;
+}
+
+
+
+.go_title_box h2{
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: 700;
+    color: white;
+    margin: 5px 0 0 20px ;
+
+}
+
+.go_title_box figure {
+    margin: 20px 20px 0  0 ;
+}
+
+@keyframes titlebox {
+    0% {width: 180px; height: 180px;}
+    100% {width: 572px; height: 572px;}
+}
+
+
+
+@keyframes border_1 {
+    0% { height:0px ; border-left: 1px solid rgb(255, 63, 52);}
+    0% { height:180px ; border-left: 1px solid rgb(255, 63, 52);}
+}
+
+
+#go_east:hover {
+    transform: rotateX(-1deg) ;
 }

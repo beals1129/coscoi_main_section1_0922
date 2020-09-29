@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>
-        <nav id="main_menu" > 
-            <div  class="main_btn" onmouseover="menuButtonOver();" onmouseout="menuButtonOut()" >
+    <header >
+        <nav id="main_menu" onmouseover="menuButtonOver();" onmouseout="menuButtonOut()" onclick="gnbOpen();" > 
+            <div id="main_btn2" class="main_btn" >
                 <div  class="btn_icon_wrap ">
                     <div class="btn_icon_bar " id="icon_1"></div>
                     <div class="btn_icon_bar" id="icon_0"></div>
@@ -22,21 +22,48 @@
                 
             </div>
             
-            <figure class="main_logo">
+            <figure  onclick="gnbOpenBtn();"  id="main_logo" >
                 <img src="img/main_logo2.png">
             </figure>
 
         </nav>
 
         </div>
-        <!-- <nav id="gnb">
-            HOME
-            ABOUT
-            CONTENTS
-            WORKS
-            PR
-            HR
-        </nav> -->
+        <nav id="gnb"  >
+            <div class="gnb_wrap">
+                <button onclick="gnbClose();" class="main_btn gnb_btn"><span></span></button>
+                <figure class="gnb_logo"><img src="img/main_logo.png"></figure>
+
+            </div>
+            
+            <ul class="gnb_menu">
+                <a href=""><li class="gnb_main_text"><span class="gnb_span"></span>HOME</li></a>
+                <a href=""><li><span class="gnb_span_motion"></span>ABOUT</li></a>
+                <a href=""><li><span class="gnb_span_none"></span>CONTENTS</li></a>
+                <ul class="lnb_conts">
+                    <a href=""><li><span class="gnb_conts_span_motion"></span>동유기</li></a>
+                    <a href=""><li><span class="gnb_conts_span_motion"></span>슬루</li></a>
+                    <a href=""><li><span class="gnb_conts_span_motion"></span>노바</li></a>
+                </ul>
+                    <a href=""><li><span class="gnb_span_motion"></span>WORKS</li></a>
+                    <a href=""><li><span class="gnb_span_none"></span>PR</li></a>
+                <ul class="lnb_conts lnb_pr">
+                    <a href=""><li><span class="gnb_conts_span_motion"></span>NOTICE</li></a>
+                    <a href=""><li><span class="gnb_conts_span_motion"></span>MEDIA CENTER</li></a>
+                </ul>
+                <a href=""><li><span class="gnb_span_motion"></span>HR</li></a>
+            </ul>
+            <ul class="lnb_contect">
+                <a href=""><li>CONTACT</li></a>
+                <a href=""><li>PRVACY POLICY</li></a>
+                <a href=""><li>LANG</li></a>
+            </ul>
+            
+            
+            
+            
+            
+        </nav>
     </header>
 
     
@@ -45,7 +72,7 @@
         '당신의 브라우저는 비디오 화일 재생을 지원하지 않습니다.'
 </video> -->
 
-    <section id="hero">
+    <section id="hero" >
         <div class="video_wrap">
             <video autoplay muted loop>
                 <source src="video/coscoi_animation.mp4" type="video/mp4">
@@ -83,6 +110,29 @@
 
     </section>
 
+    <section id="go_east">
+        <section id="go_conts">
+            <div class="go_conts_title">
+                <h2>CONTENT</h2>
+                <p></p>
+            </div>
+
+            <div scrollTop="fallIn()"  class="go_title_box">
+                <h2>GO<br>EAST</h2>
+                <figure><img src="img/main-cont-s1_logo.png"></figure>
+            </div>
+        </section>
+
+        <div  class="go_monkey"><figure><img src="img/main-cont-s1_i1.png"></figure></div>
+        <div class="go_rabbit"><figure><img src="img/main-cont-s1_i2.png"></figure></div>
+        <div class="go_mouse"><figure><img src="img/main-cont-s1_i3.png"></figure></div>
+        <div class="go_man"><figure><img src="img/main-cont-s1_i4.png"></figure></div>
+        <div class="go_car"><figure><img src="img/main-cont-s1_i5.png"></figure></div>
+
+        <div class="go_ballon"><figure><img src="img/main-cont-s1_i7.png"></figure></div>
+        <div class="go_banana"><figure><img src="img/main-cont-s1_i6.png"></figure></div>
+    </section>
+
     
 </body> 
 
@@ -97,6 +147,34 @@ function menuButtonOut() {
     document.getElementById("icon_1").style= "margin:0 0 2px 8px; transition: 0.2s;"
     document.getElementById("icon_0").style= "margin:0 0 2px ; transition: 0.2s;"
     document.getElementById("icon_2").style= "margin:0 0 2px -8px; transition: 0.2s;"
+}
+
+function gnbOpen(){
+    document.getElementById("gnb").style=" left : 0px;"
+    document.getElementById("main_logo").style=" width : 103px"
+    
+
+}
+
+function gnbClose(){
+    document.getElementById("gnb").style=" left : -715px"
+    document.getElementById("main_logo").style=" width : 100%"
+
+}
+
+
+function gnbOpenBtn(){
+
+    document.getElementById("main_logo").style=" width : 103px"
+    
+
+}
+
+function fallIn(){
+if (document.body.scrollTop > 700)
+document.getElementById("c_monkey").style="animation: c_down_1 1s 0.5s ease-in forwards;"
+
+
 }
     </script>
 
